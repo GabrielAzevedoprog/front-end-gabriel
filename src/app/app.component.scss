@@ -31,3 +31,10 @@ h1{
     background-color: #01347C;
     color: whitesmoke;
   }
+  .card {
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Adiciona uma transição suave ao aumentar e mudar a cor */
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card quando o mouse passa por cima */
+  }
