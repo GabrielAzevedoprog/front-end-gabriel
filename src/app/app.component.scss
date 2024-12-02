@@ -1,18 +1,33 @@
 h1{
     color: #01347C;
+    font-weight: bolder;
+    font-size: 35px;
 }
 
 .card
  {
     border: 1px solid #01347C;
-    width: 18rem;
-    margin-top: 30px;
-}
-.card-body{
-    color: #01347C;
 }
 
-.card-body .btn{
+.card-img-top {
+    width: 100%;
+    object-fit: cover; 
+  }
+  .card-body {
+    padding: 1rem;
+    color: #01347C;
+  }
+
+  .card-title {
+    font-size: 1.1rem; 
+  }
+
+  .card-text {
+    font-size: 0.9rem; 
+  }
+
+  .btn {
+    font-size: 0.85rem;
     background-color: #01347C;
     color: whitesmoke;
-}
+  }
