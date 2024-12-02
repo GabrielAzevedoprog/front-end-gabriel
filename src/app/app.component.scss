@@ -1,6 +1,18 @@
+h1{
+    color: #01347C;
+}
+
 .card
  {
-    border: none;
+    border: 1px solid #01347C;
     width: 18rem;
     margin-top: 30px;
+}
+.card-body{
+    color: #01347C;
+}
+
+.card-body .btn{
+    background-color: #01347C;
+    color: whitesmoke;
 }
