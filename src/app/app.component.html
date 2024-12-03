@@ -1,26 +1,43 @@
 <main class="container my-5">
-    <h1 class="text-center mb-4">Últimas Notícias</h1>
+    <div class="text-center mb-4">
+        <h1 class="text-center mb-4">Últimas Notícias</h1>
+        <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addPostModal">
+            Adicionar Postagem
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editPostModal">
+            Editar Postagem
+        </button>
+    </div>
+
     <div class="row g-4">
       <!-- Card 1 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card">
           <img src="facisa.png" class="card-img-top" alt="Imagem da notícia">
           <div class="card-body">
+            <!-- Campo para Título -->
             <h5 class="card-title">Título da Notícia 1</h5>
-            <p class="card-text">Breve descrição da notícia para atrair o leitor.</p>
-            <a href="#" class="btn btn-primary">Leia mais</a>
+            <!-- Campo para Descrição -->
+            <p class="card-text">Breve descrição da notícia.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                Leia mais
+            </button>            
           </div>
         </div>
       </div>
-
+    
       <!-- Card 2 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card">
           <img src="facisa.png" class="card-img-top" alt="Imagem da notícia">
           <div class="card-body">
+            <!-- Campo para Título -->
             <h5 class="card-title">Título da Notícia 2</h5>
-            <p class="card-text">Breve descrição da notícia para atrair o leitor.</p>
-            <a href="#" class="btn btn-primary">Leia mais</a>
+            <!-- Campo para Descrição -->
+            <p class="card-text">Breve descrição da notícia.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                Leia mais
+            </button>
           </div>
         </div>
       </div>
@@ -30,9 +47,13 @@
         <div class="card">
           <img src="facisa.png" class="card-img-top" alt="Imagem da notícia">
           <div class="card-body">
+            <!-- Campo para Título -->
             <h5 class="card-title">Título da Notícia 3</h5>
-            <p class="card-text">Breve descrição da notícia para atrair o leitor.</p>
-            <a href="#" class="btn btn-primary">Leia mais</a>
+            <!-- Campo para Descrição -->
+            <p class="card-text">Breve descrição da notícia.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                Leia mais
+            </button>
           </div>
         </div>
       </div>
@@ -42,13 +63,99 @@
         <div class="card">
           <img src="facisa.png" class="card-img-top" alt="Imagem da notícia">
           <div class="card-body">
+            <!-- Campo para Título -->
             <h5 class="card-title">Título da Notícia 4</h5>
-            <p class="card-text">Breve descrição da notícia para atrair o leitor.</p>
-            <a href="#" class="btn btn-primary">Leia mais</a>
+            <!-- Campo para Descrição -->
+            <p class="card-text">Breve descrição da notícia.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                Leia mais
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+
+    <!-- Modal das Postagens-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Campo para Título -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Título da Notícia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Campo para Descrição -->
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, suscipit animi iste repudiandae, perspiciatis accusamus voluptatem labore veniam aliquam.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Nova Postagem -->
+    <div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="addPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="addPostModalLabel">Adicionar Nova Postagem</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form id="addPostForm">
+                <!-- Campo para Título -->
+                <div class="mb-3">
+                <label for="postTitle" class="form-label">Título da Postagem</label>
+                <input type="text" class="form-control" id="postTitle" placeholder="Digite o título da postagem" required>
+                </div>
+                <!-- Campo para Descrição -->
+                <div class="mb-3">
+                <label for="postDescription" class="form-label">Descrição</label>
+                <textarea class="form-control" id="postDescription" rows="4" placeholder="Digite a descrição da postagem" required></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" id="cancelar" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" id="salvar" class="btn btn-primary" form="addPostForm">Salvar Postagem</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="editPostModal" tabindex="-1" aria-labelledby="editPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editPostModalLabel">Editar Postagem</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editPostForm">
+            <!-- Campo para Título -->
+            <div class="mb-3">
+              <label for="editPostTitle" class="form-label">Título da Postagem</label>
+              <input type="text" class="form-control" id="editPostTitle" placeholder="Digite o novo título da postagem" value="Título atual" required>
+            </div>
+            <!-- Campo para Descrição -->
+            <div class="mb-3">
+              <label for="editPostDescription" class="form-label">Descrição</label>
+              <textarea class="form-control" id="editPostDescription" rows="4" placeholder="Digite a nova descrição da postagem" required>Descrição atual da postagem</textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancelar" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" id="salvar" class="btn btn-primary" form="editPostForm">Salvar Alterações</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </main>
   
 

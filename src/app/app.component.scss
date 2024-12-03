@@ -32,9 +32,34 @@ h1{
     color: whitesmoke;
   }
   .card {
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Adiciona uma transição suave ao aumentar e mudar a cor */
+    transition: transform 0.3s ease, background-color 0.3s ease; 
   }
 
   .card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho do card quando o mouse passa por cima */
+    transform: scale(1.05);
+  }
+
+  #cancelar {
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+  }
+
+  #cancelar:hover {
+    transform: scale(1.05);
+    background-color: red;
+  }
+  #salvar {
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+  }
+
+  #salvar:hover {
+    transform: scale(1.05);
+    background-color: green;
+  }
+
+  .btn {
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
   }
